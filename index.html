@@ -30,18 +30,15 @@
   
   /* 標題與切換區塊 */
   .header-area {
-    display: flex;
-    flex-direction: column; align-items: center; margin-bottom: 28px; position: relative;
+    display: flex; flex-direction: column; align-items: center; margin-bottom: 28px; position: relative;
   }
   h1{font-weight:800;font-size:52px;letter-spacing:.5px;text-align:center;margin:0 0 16px}
   
   .view-toggle {
-    display: flex;
-    background: #f1f5f9; padding: 4px; border-radius: 8px;
+    display: flex; background: #f1f5f9; padding: 4px; border-radius: 8px;
   }
   .view-btn {
-    padding: 8px 24px; border: none; background: transparent;
-    cursor: pointer;
+    padding: 8px 24px; border: none; background: transparent; cursor: pointer;
     font-size: 14px; font-weight: 600; color: var(--muted); border-radius: 6px;
     transition: all 0.2s;
   }
@@ -52,8 +49,7 @@
   /* 原始卡片樣式 */
   .card{
     display:grid; grid-template-columns:140px 1fr 240px; gap:24px;
-    border:2px solid var(--line); border-radius:16px;
-    padding:16px 20px; margin:0 0 20px;
+    border:2px solid var(--line); border-radius:16px; padding:16px 20px; margin:0 0 20px;
     background:#fff; position:relative;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
   }
@@ -65,15 +61,13 @@
 
   /* --- 顏色主題樣式 (新增 Green) --- */
   .card.accent{border-color:var(--soft-red-line); background:var(--soft-red)}
-  .card.purple{border-color:var(--soft-purple-line);
-    background:var(--soft-purple)}
+  .card.purple{border-color:var(--soft-purple-line); background:var(--soft-purple)}
   /* 新增：綠色卡片樣式 */
   .card.green{border-color:var(--soft-green-line); background:var(--soft-green)}
 
   .date{
     padding-right:20px; border-right:2px solid var(--line);
-    display:flex; flex-direction:column; align-items:center;
-    justify-content:center;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
     text-align:center;
   }
   .date .label,.date .weekday{font-size:14px;color:var(--muted);letter-spacing:1px}
@@ -93,8 +87,7 @@
   .card.green .date .day,
   .card.green .date .weekday{color:var(--green)}
   
-  .content{display:flex;
-    flex-direction: column; justify-content: center;}
+  .content{display:flex; flex-direction: column; justify-content: center;}
   .content h2{margin:0; font-size:40px; line-height:1.15; font-weight:800}
   .content h2.red{color:var(--accent)}
   .content h2.purple{color:var(--purple)}
@@ -103,21 +96,17 @@
   
   /* 備註樣式 */
   .content .note{
-    font-size: 15px;
-    color: #555; margin-top: 10px; font-weight: 400;
+    font-size: 15px; color: #555; margin-top: 10px; font-weight: 400;
     background-color: #f3f4f6; padding: 6px 12px; border-radius: 6px;
-    border-left: 3px solid #cbd5e1; line-height: 1.5;
-    white-space: pre-wrap;
+    border-left: 3px solid #cbd5e1; line-height: 1.5; white-space: pre-wrap;
   }
 
   .meta{
     padding-left:20px; border-left:2px solid var(--line);
-    background:#F7F7F7; border-radius:12px; padding:12px 16px; display:flex; flex-direction:column;
-    justify-content:center
+    background:#F7F7F7; border-radius:12px; padding:12px 16px; display:flex; flex-direction:column; justify-content:center
   }
   .meta .row{margin:4px 0; font-size:16px}
-  .meta .key{color:var(--muted);
-    margin-right:6px}
+  .meta .key{color:var(--muted); margin-right:6px}
 
   /* 月曆模式樣式 */
   #calendarContainer {
@@ -128,11 +117,9 @@
   }
   .calendar-header h2 { margin: 0; font-size: 24px; }
   .calendar-nav-btn {
-    background: white;
-    border: 1px solid var(--line); padding: 8px 16px; border-radius: 6px; cursor: pointer;
+    background: white; border: 1px solid var(--line); padding: 8px 16px; border-radius: 6px; cursor: pointer;
   }
-  .calendar-nav-btn:hover { background: #f9fafb;
-  }
+  .calendar-nav-btn:hover { background: #f9fafb; }
 
   .calendar-grid {
     display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px;
@@ -142,8 +129,7 @@
   }
   .calendar-cell {
     background: white; border: 1px solid var(--line); border-radius: 8px; min-height: 120px;
-    padding: 8px;
-    display: flex; flex-direction: column; gap: 4px;
+    padding: 8px; display: flex; flex-direction: column; gap: 4px;
     position: relative;
   }
   .calendar-cell.other-month {
@@ -152,8 +138,7 @@
   
   /* 月曆中的事件樣式 */
   .calendar-event {
-    font-size: 13px; padding: 4px 8px; border-radius: 4px;
-    cursor: pointer;
+    font-size: 13px; padding: 4px 8px; border-radius: 4px; cursor: pointer;
     background: white; border: 1px solid var(--line); box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     margin-bottom: 2px;
@@ -189,86 +174,71 @@
   
   .day-number {
     font-weight: 800; color: var(--muted); margin-bottom: 4px; font-size: 14px;
-    display: flex;
-    justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-between; align-items: center;
   }
 
   /* 未定日期區塊 */
   .unscheduled-area {
-    margin-bottom: 24px; padding: 16px;
-    background: #fdfdfd; 
+    margin-bottom: 24px; padding: 16px; background: #fdfdfd; 
     border: 2px dashed var(--line); border-radius: 12px;
   }
-  .unscheduled-title { font-size: 14px; font-weight: 600; color: var(--muted); margin-bottom: 8px;
-  }
-  .unscheduled-list { display: flex; flex-wrap: wrap; gap: 8px;
-  }
+  .unscheduled-title { font-size: 14px; font-weight: 600; color: var(--muted); margin-bottom: 8px; }
+  .unscheduled-list { display: flex; flex-wrap: wrap; gap: 8px; }
 
 
   /* 管理功能樣式 */
   .admin-btn{
     position:fixed; top:20px; right:20px; 
     background:var(--blue); color:white; border:none; padding:12px 20px; 
-    border-radius:8px; cursor:pointer;
-    font-size:14px; font-weight:600;
+    border-radius:8px; cursor:pointer; font-size:14px; font-weight:600;
     box-shadow:0 4px 12px rgba(37,99,235,0.3); z-index:100;
   }
   .admin-btn:hover{background:#1d4ed8}
 
   .edit-btn{
     position:absolute; top:16px; right:16px;
-    background:var(--green); color:white;
-    border:none; padding:8px 12px;
+    background:var(--green); color:white; border:none; padding:8px 12px;
     border-radius:6px; cursor:pointer; font-size:12px; opacity:0; transition:opacity 0.3s;
     display:none;
   }
-  .admin-mode .edit-btn{opacity:1;
-    display:block}
+  .admin-mode .edit-btn{opacity:1; display:block}
   .edit-btn:hover{background:#047857}
 
   .add-btn{
     background:var(--blue); color:white; border:none; padding:16px 32px;
     border-radius:12px; cursor:pointer; font-size:16px; font-weight:600;
-    margin:20px auto; display:none;
-    box-shadow:0 4px 12px rgba(37,99,235,0.3);
+    margin:20px auto; display:none; box-shadow:0 4px 12px rgba(37,99,235,0.3);
   }
   .admin-mode .add-btn{display:block}
   .add-btn:hover{background:#1d4ed8}
 
   /* 模態框樣式 */
   .modal{
-    display:none;
-    position:fixed; top:0; left:0; width:100%; height:100%;
+    display:none; position:fixed; top:0; left:0; width:100%; height:100%;
     background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;
   }
   .modal.show{display:flex}
   .modal-content{
-    background:white; padding:32px; border-radius:16px;
-    width:500px; max-width:90%;
+    background:white; padding:32px; border-radius:16px; width:500px; max-width:90%;
     box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:90vh; overflow-y:auto;
   }
-  .modal h3{margin:0 0 24px; font-size:24px; text-align:center;
-    font-weight:800}
+  .modal h3{margin:0 0 24px; font-size:24px; text-align:center; font-weight:800}
   
   .form-group{margin:20px 0}
-  .form-group label{display:block; margin-bottom:8px; font-weight:600;
-    color:var(--ink)}
+  .form-group label{display:block; margin-bottom:8px; font-weight:600; color:var(--ink)}
   .form-group input, .form-group select, .form-group textarea{
     width:100%; padding:12px 16px; border:2px solid var(--line); border-radius:8px;
-    font-size:16px; font-family:inherit;
-    transition:border-color 0.3s;
+    font-size:16px; font-family:inherit; transition:border-color 0.3s;
   }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus{
     outline:none; border-color:var(--blue);
   }
-  .form-group textarea{resize:vertical;
-    min-height:100px}
+  .form-group textarea{resize:vertical; min-height:100px}
   .form-group textarea.short{min-height:80px; height: 80px;}
   
   .btn{
     background:var(--blue); color:white; border:none; padding:12px 24px;
-    border-radius:8px; cursor:pointer;
-    font-size:16px; font-weight:600; margin:8px 4px;
+    border-radius:8px; cursor:pointer; font-size:16px; font-weight:600; margin:8px 4px;
     transition:background-color 0.3s;
   }
   .btn:hover{background:#1d4ed8}
@@ -279,13 +249,11 @@
 
   /* 人員管理樣式 */
   .staff-section{
-    margin:24px 0;
-    padding:20px; background:#f8f9fa; border-radius:12px;
+    margin:24px 0; padding:20px; background:#f8f9fa; border-radius:12px;
   }
   .staff-section h4{margin:0 0 16px; font-size:18px; font-weight:600}
   .staff-list{
-    display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:12px; margin:16px 0;
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:12px; margin:16px 0;
   }
   .staff-item{
     background:white; padding:12px 16px; border-radius:8px; border:1px solid var(--line);
@@ -300,15 +268,13 @@
   /* 檔案上傳樣式 */
   .file-upload{
     border:2px dashed var(--line); border-radius:8px; padding:30px;
-    text-align:center; cursor:pointer;
-    transition:all 0.3s;
+    text-align:center; cursor:pointer; transition:all 0.3s;
     background:#fafafa;
   }
   .file-upload:hover{border-color:var(--blue); background:#f0f8ff}
   .file-upload input{display:none}
   .file-upload p{margin:0; color:var(--muted)}
-  .file-upload small{color:var(--muted);
-    font-size:12px}
+  .file-upload small{color:var(--muted); font-size:12px}
 
   .checkbox-group{
     display:flex; align-items:center; gap:8px; margin:16px 0;
@@ -319,37 +285,30 @@
 
   /* 載入中遮罩 */
   #loadingOverlay {
-    display: none; position: fixed; top: 0; left: 0;
-    width: 100%; height: 100%;
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(255, 255, 255, 0.7); z-index: 9998;
     align-items: center; justify-content: center;
   }
   #loadingSpinner {
     border: 6px solid var(--line); border-top: 6px solid var(--blue);
-    border-radius: 50%; width: 50px;
-    height: 50px; animation: spin 1s linear infinite;
+    border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;
   }
-  #loadingOverlay.show { display: flex;
-  }
+  #loadingOverlay.show { display: flex; }
   @keyframes spin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg);
-  }
+    100% { transform: rotate(360deg); }
   }
 
   @media (max-width:900px){
     .card{grid-template-columns:1fr; }
-    .date{border-right:0; border-bottom:2px solid var(--line); padding-bottom:12px;
-    margin-bottom:8px}
+    .date{border-right:0; border-bottom:2px solid var(--line); padding-bottom:12px; margin-bottom:8px}
     .meta{border-left:0; margin-top:8px}
     .content h2{font-size:28px}
     .date .day{font-size:42px}
-    .modal-content{width:95%;
-    padding:20px}
+    .modal-content{width:95%; padding:20px}
     .admin-btn{position:static; margin:20px auto; display:block; width:fit-content}
     /* 月曆 RWD */
-    .calendar-cell { min-height: 80px;
-    }
+    .calendar-cell { min-height: 80px; }
   }
 </style>
   <style>@view-transition { navigation: auto; }</style>
@@ -390,8 +349,7 @@
      
      <div id="unscheduledArea" class="unscheduled-area" style="display:none;">
         <div class="unscheduled-title">📅 日期未定新聞</div>
-     
-     <div class="unscheduled-list" id="unscheduledList"></div>
+        <div class="unscheduled-list" id="unscheduledList"></div>
      </div>
 
      <div class="calendar-grid" id="calendarGrid">
@@ -413,8 +371,7 @@
   <div id="editModal" class="modal">
    <div class="modal-content">
     <h3 id="editTitle">編輯新聞</h3>
-    <div class="form-group"><label>📅 發布日期：</label> <input type="date" id="editDate" 
-    required>
+    <div class="form-group"><label>📅 發布日期：</label> <input type="date" id="editDate" required>
     </div>
     <div class="form-group"><label>📰 新聞標題：</label> <textarea id="editNewsTitle" placeholder="請輸入新聞標題" required></textarea>
     </div>
@@ -429,44 +386,35 @@
     </div>
     <div class="checkbox-group"><input type="checkbox" id="editAccent"> <label for="editAccent">⭐ 重點新聞（紫色標示）</label>
     </div>
-  
     <div style="text-align:center; margin-top:32px"><button class="btn" onclick="saveNews()">💾 儲存</button> <button class="btn danger" onclick="deleteNews()" id="deleteBtn">✅ 完成新聞</button> <button class="btn secondary" onclick="closeModal('editModal')">取消</button>
     </div>
    </div>
   </div>
 
   <div id="historyModal" class="modal">
-   <div class="modal-content" style="width:900px;
-    max-width:95%; max-height:90vh">
+   <div class="modal-content" style="width:900px; max-width:95%; max-height:90vh">
     <h3>📚 新聞歷史紀錄</h3><div class="staff-section">
      <h4>🔍 搜尋條件</h4>
-     <div style="display:grid;
-    grid-template-columns:1fr 1fr 2fr auto; gap:12px; margin-bottom:16px"><select id="searchYear"> <option value="">選擇年份</option> </select> <select id="searchMonth"> <option value="">選擇月份</option> <option value="1">1月</option> <option value="2">2月</option> <option value="3">3月</option> <option value="4">4月</option> <option value="5">5月</option> <option value="6">6月</option> <option value="7">7月</option> <option value="8">8月</option> <option value="9">9月</option> <option value="10">10月</option> <option value="11">11月</option> <option value="12">12月</option> </select> <input type="text" id="searchKeyword" placeholder="輸入關鍵字搜尋標題內容..."> <button class="btn" onclick="searchHistory()">搜尋</button>
+     <div style="display:grid; grid-template-columns:1fr 1fr 2fr auto; gap:12px; margin-bottom:16px"><select id="searchYear"> <option value="">選擇年份</option> </select> <select id="searchMonth"> <option value="">選擇月份</option> <option value="1">1月</option> <option value="2">2月</option> <option value="3">3月</option> <option value="4">4月</option> <option value="5">5月</option> <option value="6">6月</option> <option value="7">7月</option> <option value="8">8月</option> <option value="9">9月</option> <option value="10">10月</option> <option value="11">11月</option> <option value="12">12月</option> </select> <input type="text" id="searchKeyword" placeholder="輸入關鍵字搜尋標題內容..."> <button class="btn" onclick="searchHistory()">搜尋</button>
      </div>
-     <div style="text-align:center"><button class="btn secondary" onclick="clearSearch()" style="font-size:14px;
-    padding:8px 16px">清除條件</button> <span id="searchResults" style="margin-left:16px; color:var(--muted); font-size:14px"></span>
+     <div style="text-align:center"><button class="btn secondary" onclick="clearSearch()" style="font-size:14px; padding:8px 16px">清除條件</button> <span id="searchResults" style="margin-left:16px; color:var(--muted); font-size:14px"></span>
      </div>
     </div><div class="staff-section">
      <h4>📰 歷史新聞 (<span id="historyCount">0</span>)</h4>
-     <div id="historyList" style="max-height:400px;
-    overflow-y:auto; border:1px solid var(--line); border-radius:8px; padding:16px; background:white"></div>
+     <div id="historyList" style="max-height:400px; overflow-y:auto; border:1px solid var(--line); border-radius:8px; padding:16px; background:white"></div>
     </div>
-    <div style="text-align:center; margin-top:32px"><button class="btn" onclick="downloadHistoryExcel()" style="background:var(--green);
-    margin-right:12px">📥 下載Excel</button> <button class="btn secondary" onclick="closeModal('historyModal')">關閉</button>
+    <div style="text-align:center; margin-top:32px"><button class="btn" onclick="downloadHistoryExcel()" style="background:var(--green); margin-right:12px">📥 下載Excel</button> <button class="btn secondary" onclick="closeModal('historyModal')">關閉</button>
     </div>
    </div>
   </div>
 
   <div id="staffModal" class="modal">
-   <div class="modal-content" style="width:800px;
-    max-width:95%">
+   <div class="modal-content" style="width:800px; max-width:95%">
     <h3>👥 管理後台</h3><div class="staff-section">
      <h4>📰 新聞管理</h4>
-     <div style="text-align:center;
-    margin:16px 0"><button class="btn" onclick="addNews()">➕ 新增新聞</button>
+     <div style="text-align:center; margin:16px 0"><button class="btn" onclick="addNews()">➕ 新增新聞</button>
      </div>
-     <div id="adminNewsList" style="max-height:300px; overflow-y:auto;
-    border:1px solid var(--line); border-radius:8px; padding:16px; background:white"></div>
+     <div id="adminNewsList" style="max-height:300px; overflow-y:auto; border:1px solid var(--line); border-radius:8px; padding:16px; background:white"></div>
     </div>
     <div class="staff-section">
      <h4>📊 Excel檔案匯入</h4>
@@ -477,8 +425,7 @@
     </div>
     <div class="staff-section">
      <h4>➕ 手動新增人員</h4>
-     <div style="display:grid;
-    grid-template-columns:1fr 1fr 1fr auto; gap:12px; margin-bottom:16px"><input type="text" id="staffId" placeholder="員工編號"> <input type="text" id="staffName" placeholder="姓名"> <select id="staffRole"> <option value="editor">編輯</option> <option value="video">影片</option> <option value="graphic">平面</option> </select> <button class="btn" onclick="addStaff()">新增</button>
+     <div style="display:grid; grid-template-columns:1fr 1fr 1fr auto; gap:12px; margin-bottom:16px"><input type="text" id="staffId" placeholder="員工編號"> <input type="text" id="staffName" placeholder="姓名"> <select id="staffRole"> <option value="editor">編輯</option> <option value="video">影片</option> <option value="graphic">平面</option> </select> <button class="btn" onclick="addStaff()">新增</button>
      </div>
     </div>
     <div class="staff-section">
@@ -491,11 +438,9 @@
     </div>
     <div class="staff-section">
      <h4>🎨 平面人員 (<span id="graphicCount">0</span>)</h4>
-     <div 
-    id="graphicList" class="staff-list"></div>
+     <div id="graphicList" class="staff-list"></div>
     </div>
-    <div style="text-align:center;
-    margin-top:32px"><button class="btn" onclick="closeModal('staffModal')">✅ 完成</button>
+    <div style="text-align:center; margin-top:32px"><button class="btn" onclick="closeModal('staffModal')">✅ 完成</button>
     </div>
    </div>
   </div>
@@ -578,6 +523,7 @@ function renderCalendar() {
   
   const year = calendarDate.getFullYear();
   const month = calendarDate.getMonth();
+  
   monthLabel.textContent = `${year}年 ${month + 1}月`;
   
   // 渲染星期標題
@@ -588,6 +534,7 @@ function renderCalendar() {
     div.textContent = day;
     grid.appendChild(div);
   });
+
   // 計算當月天數與起始星期
   const firstDayOfMonth = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -603,15 +550,18 @@ function renderCalendar() {
   // 取得真實的今天日期 (用於計算兩天內新增)
   const today = new Date();
   today.setHours(0,0,0,0);
+
   // 渲染當月天數
   for (let i = 1; i <= daysInMonth; i++) {
     const cell = createCalendarCell(i, false);
+    
     // 構建這個格子的日期字串 (YYYY-MM-DD)
     const currentDateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
     const cellDate = new Date(year, month, i);
     
     // 找出當天的新聞 (確保資料同步)
     const daysNews = newsData.filter(n => n.date === currentDateStr);
+    
     daysNews.forEach(news => {
       const event = document.createElement('div');
       event.className = 'calendar-event';
@@ -623,7 +573,6 @@ function renderCalendar() {
         const createdDate = new Date(news.createdDate);
         createdDate.setHours(0,0,0,0);
         const diffTime = Math.abs(today - createdDate);
-        
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
         if (diffDays <= 1) { 
            isNewlyAdded = true;
@@ -655,8 +604,7 @@ function renderCalendar() {
       event.textContent = displayTitle;
 
       // 顯示備註在 title tooltip 中
-      const tooltip = `${news.title}\n${news.note ?
-        `備註: ${news.note}\n` : ''}編輯: ${getStaffName('editor', news.editor)}`;
+      const tooltip = `${news.title}\n${news.note ? `備註: ${news.note}\n` : ''}編輯: ${getStaffName('editor', news.editor)}`;
       event.title = tooltip;
       
       // 點擊事件：跳轉到看板模式
@@ -676,31 +624,32 @@ function renderCalendar() {
   if (unscheduledNews.length > 0) {
     unscheduledArea.style.display = 'block';
     unscheduledNews.forEach(news => {
-        const event = document.createElement('div');
-        event.className = 'calendar-event';
-        
-        // 未定日期的文字顏色邏輯 (綠 > 紫 > 黑) - 沒有「當日」的概念
-        let isNewlyAdded = false;
-        if (news.createdDate) {
-            const createdDate = new Date(news.createdDate);
-            createdDate.setHours(0,0,0,0);
-            const diffTime = Math.abs(today - createdDate);
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-            if (diffDays <= 1) isNewlyAdded = true;
-        }
+      const event = document.createElement('div');
+      event.className = 'calendar-event';
+      
+      // 未定日期的文字顏色邏輯 (綠 > 紫 > 黑) - 沒有「當日」的概念
+      let isNewlyAdded = false;
+      if (news.createdDate) {
+        const createdDate = new Date(news.createdDate);
+        createdDate.setHours(0,0,0,0);
+        const diffTime = Math.abs(today - createdDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        if (diffDays <= 1) isNewlyAdded = true;
+      }
 
-        if (isNewlyAdded) event.classList.add('text-green');
-        else if (news.accent) event.classList.add('text-purple');
-        else event.classList.add('text-black');
+      if (isNewlyAdded) event.classList.add('text-green');
+      else if (news.accent) event.classList.add('text-purple');
+      else event.classList.add('text-black');
 
-        let displayTitle = news.title;
-        if (displayTitle.length > 10) displayTitle = displayTitle.substring(0, 10) + '...';
-        event.textContent = displayTitle;
-        event.onclick = (e) => {
-            e.stopPropagation();
-            jumpToBoard(news.id);
-        };
-        unscheduledList.appendChild(event);
+      let displayTitle = news.title;
+      if (displayTitle.length > 10) displayTitle = displayTitle.substring(0, 10) + '...';
+      event.textContent = displayTitle;
+      
+      event.onclick = (e) => { 
+          e.stopPropagation();
+          jumpToBoard(news.id);
+      };
+      unscheduledList.appendChild(event);
     });
   } else {
     unscheduledArea.style.display = 'none';
@@ -722,94 +671,74 @@ function changeMonth(offset) {
 // 輔助：取得員工姓名
 function getStaffName(role, id) {
   const person = staffData[role]?.find(s => s.id == id);
-  return person ? person.name : '未指派/已離職';
+  return person ? person.name : '未指派';
 }
 
-// 首次載入資料
-async function loadData() {
-  showLoading(true);
-  try {
-    const response = await fetch(GAS_WEB_APP_URL + "?action=loadAll");
-    const data = await response.json();
-    if (data.newsData) newsData = data.newsData;
-    if (data.staffData) staffData = data.staffData;
-    if (data.historyData) historyData = data.historyData;
-    
-    // 初始化人員下拉選單
-    updateStaffSelects();
-    renderNews();
-    scheduleAutoDelete(); // 設定自動刪除排程
-  } catch (error) {
-    console.error("載入資料失敗:", error);
-    showNotification('❌ 載入資料失敗，請檢查 Apps Script 設定。', 'error');
-  } finally {
-    showLoading(false);
+
+// 自動刪除過期新聞函數
+async function autoDeleteExpiredNews() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  
+  const originalLength = newsData.length;
+  
+  // 將要刪除的新聞加入歷史紀錄
+  const expiredNews = newsData.filter(news => {
+    if (!news.date) return false; 
+    const newsDate = new Date(news.date);
+    newsDate.setHours(0, 0, 0, 0);
+    return newsDate < today;
+  });
+  
+  // 加入歷史紀錄（避免重複）
+  expiredNews.forEach(news => {
+    const exists = historyData.some(h => h.id == news.id && h.date === news.date);
+    if (!exists) {
+      historyData.push({
+        ...news,
+        archivedDate: new Date().toISOString().split('T')[0]
+      });
+    }
+  });
+  
+  // 保留今天及以後的新聞 (或沒有日期的)
+  newsData = newsData.filter(news => {
+    if (!news.date) return true;
+    const newsDate = new Date(news.date);
+    newsDate.setHours(0, 0, 0, 0);
+    return newsDate >= today;
+  });
+  
+  if (newsData.length < originalLength) {
+    await saveData();
+    console.log(`自動刪除了 ${originalLength - newsData.length} 則過期新聞`);
   }
 }
 
-// 自動刪除排程
-function scheduleAutoDelete() {
-    if (autoDeleteTimer) clearTimeout(autoDeleteTimer);
-
-    const now = new Date();
-    const midnight = new Date();
-    midnight.setHours(24, 0, 0, 0); // 明天午夜
-
-    const timeUntilMidnight = midnight.getTime() - now.getTime();
-
-    // 立即執行一次，然後排程每天執行
-    autoDeleteExpiredNews();
+async function scheduleAutoDelete() {
+  if (autoDeleteTimer) clearTimeout(autoDeleteTimer);
+  
+  const now = new Date();
+  const tomorrow = new Date(now);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setHours(0, 0, 0, 0);
+  
+  const timeUntilMidnight = tomorrow.getTime() - now.getTime();
+  
+  autoDeleteTimer = setTimeout(async () => {
+    await autoDeleteExpiredNews();
+    renderNews();
+    if(document.getElementById('calendarContainer').style.display !== 'none') renderCalendar();
+    updateAdminNewsList();
     
-    autoDeleteTimer = setTimeout(() => {
-        autoDeleteExpiredNews(); 
-        renderNews(); 
-        if(document.getElementById('calendarContainer').style.display !== 'none') renderCalendar();
-        updateAdminNewsList();
-
-        setInterval(async () => {
-            await autoDeleteExpiredNews(); 
-            renderNews(); 
-            if(document.getElementById('calendarContainer').style.display !== 'none') renderCalendar();
-            updateAdminNewsList();
-        }, 24 * 60 * 60 * 1000); // 之後每隔 24 小時執行
-    }, timeUntilMidnight);
+    setInterval(async () => {
+      await autoDeleteExpiredNews();
+      renderNews();
+      if(document.getElementById('calendarContainer').style.display !== 'none') renderCalendar();
+      updateAdminNewsList();
+    }, 24 * 60 * 60 * 1000);
+  }, timeUntilMidnight);
 }
-
-
-// 自動將過期新聞移至歷史紀錄 (已過期的定義：日期在今天之前的)
-async function autoDeleteExpiredNews() {
-    const today = new Date();
-    today.setHours(0,0,0,0);
-    let deletedCount = 0;
-    
-    const activeNews = [];
-
-    newsData.forEach(news => {
-        const newsDate = new Date(news.date);
-        newsDate.setHours(0,0,0,0);
-        
-        // 檢查是否為有效日期且日期已過
-        if (news.date && !isNaN(newsDate.getTime()) && newsDate < today) {
-            // 檢查歷史紀錄中是否已存在
-            const exists = historyData.some(h => h.id == news.id && h.date === news.date);
-            if (!exists) {
-                historyData.push({ ...news, archivedDate: new Date().toISOString().split('T')[0] });
-            }
-            deletedCount++;
-        } else {
-            activeNews.push(news);
-        }
-    });
-
-    if (deletedCount > 0) {
-        newsData = activeNews;
-        await saveData();
-        showNotification(`📝 已自動歸檔 ${deletedCount} 則過期新聞至歷史紀錄。`, 'success');
-        return true;
-    }
-    return false;
-}
-
 
 document.addEventListener('DOMContentLoaded', async function() {
   await loadData();
@@ -819,111 +748,105 @@ document.addEventListener('DOMContentLoaded', async function() {
 function renderNews() {
   const container = document.getElementById('newsContainer');
   container.innerHTML = '';
+  
   scheduleAutoDelete();
-
-  const today = new Date(); // 為了計算新增兩天內，將時間歸零
+  
+  const today = new Date();
+  // 為了計算新增兩天內，將時間歸零
   const todayMidnight = new Date();
   todayMidnight.setHours(0,0,0,0);
-
+  
   const sortedNews = [...newsData].sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
-    
     const aHasDate = a.date && !isNaN(dateA.getTime());
     const bHasDate = b.date && !isNaN(dateB.getTime());
 
-    // 1. 無日期排在最末尾
     if (aHasDate && !bHasDate) return -1;
     if (!aHasDate && bHasDate) return 1;
     if (!aHasDate && !bHasDate) return 0;
-
-    // 2. 當日新聞排在最前
+    
     const isToday = (date) => new Date(date).toDateString() === today.toDateString();
     const aIsToday = isToday(dateA);
     const bIsToday = isToday(dateB);
-
+    
     if (aIsToday && !bIsToday) return -1;
     if (!aIsToday && bIsToday) return 1;
-
-    // 3. 依日期升序排列
+    
     return dateA - dateB;
   });
-
+  
   sortedNews.forEach(news => {
     const newsDate = new Date(news.date);
-    const isValidDate = news.date && !isNaN(newsDate.getTime());
-    
+    const isValidDate = news.date && !isNaN(newsDate.getTime()); 
     const dayNames = ['日', '一', '二', '三', '四', '五', '六'];
     const dayOfWeek = isValidDate ? dayNames[newsDate.getDay()] : '-';
     const dateStr = isValidDate ? `${newsDate.getMonth() + 1}/${newsDate.getDate()}` : '--';
-    
     const isToday = isValidDate && newsDate.toDateString() === today.toDateString();
 
     const editor = staffData.editor.find(s => s.id == news.editor);
     const video = staffData.video.find(s => s.id == news.video);
     const graphic = staffData.graphic.find(s => s.id == news.graphic);
-
+    
     const card = document.createElement('section');
     card.id = `news-${news.id}`; // 加入 ID 以供跳轉定位
-
     let cardClass = 'card';
     let titleClass = '';
     
-    // ===== 新增兩天內的判斷邏輯 (綠色高亮) =====
-    let isNewlyAdded = 
-    false;
+    // ===== 新增兩天內的判斷邏輯 =====
+    let isNewlyAdded = false;
     if (news.createdDate) {
-        const createdDate = new Date(news.createdDate);
-        createdDate.setHours(0,0,0,0);
-        const diffTime = Math.abs(todayMidnight - createdDate);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-        
-        // 如果 createdDate 是今日或昨日，則 diffDays <= 1 (或 2 天內，看午夜計算差值而定，通常 <= 1 即可涵蓋 48 小時內)
-        if (diffDays <= 1) { // 
-           isNewlyAdded = true;
-        }
+      const createdDate = new Date(news.createdDate);
+      createdDate.setHours(0,0,0,0);
+      const diffTime = Math.abs(todayMidnight - createdDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      if (diffDays <= 1) {
+        isNewlyAdded = true;
+      }
     }
-
-
-    // 優先級：綠色 (新增/編輯) > 紅色 (當日) > 紫色 (重點) > 預設
+    // =============================
+    
+    // 設定樣式優先級：綠(新增) > 紅(今天) > 紫(重點)
     if (isNewlyAdded) {
         cardClass += ' green';
         titleClass = 'green';
     } else if (isToday) {
-        cardClass += ' accent';
-        titleClass = 'red';
+      cardClass += ' accent';
+      titleClass = 'red';
     } else if (news.accent) {
-        cardClass += ' purple';
-        titleClass = 'purple';
+      cardClass += ' purple';
+      titleClass = 'purple';
     }
     
-    const noteHtml = news.note ? `<div class="note">${news.note}</div>` : '';
-
-
     card.className = cardClass;
+    
+    // ===== 備註顯示邏輯 =====
+    const noteHtml = news.note ? `<div class="note">備註：${news.note}</div>` : '';
+    // ============================
+
     card.innerHTML = `
-        <button class="edit-btn" onclick="editNews(${news.id})">編輯</button>
-        <div class="date">
-            ${isValidDate ? `
-                <div class="label">${isToday ? '今天' : '發布日'}</div>
-                <div class="day">${dateStr}</div>
-                <div class="weekday">禮拜${dayOfWeek}</div>
-            ` : `
-                <div class="label">日期未定</div>
-                <div class="day" style="font-size: 56px; color: var(--muted); line-height: 1;">${dateStr}</div>
-                <div class="weekday"></div>
-            `}
-        </div>
-        <div class="content">
-            <h2 ${titleClass ? `class="${titleClass}"` : ''}>${news.title}</h2>
-            ${noteHtml}
-        </div>
-        <aside class="meta">
-            <div class="row"><span class="key">編輯：</span>${news.editor || ''}（${editor ? editor.name : '未指派'}）</div>
-            <div class="row"><span class="key">影片：</span>${news.video ||
-            ''}（${video ? video.name : '未指派'}）</div>
-            <div class="row"><span class="key">平面：</span>${news.graphic || ''}（${graphic ? graphic.name : '未指派'}）</div>
-        </aside>
+      <button class="edit-btn" onclick="editNews(${news.id})">編輯</button>
+      
+      <div class="date">
+        ${isValidDate ? `
+          <div class="label">預計發布</div>
+          <div class="day">${dateStr}</div>
+          <div class="weekday">禮拜${dayOfWeek}</div>
+        ` : `
+          <div class="label">日期未定</div>
+          <div class="day" style="font-size: 56px; color: var(--muted); line-height: 1;">${dateStr}</div>
+          <div class="weekday"></div>
+        `}
+      </div>
+      <div class="content">
+        <h2 ${titleClass ? `class="${titleClass}"` : ''}>${news.title}</h2>
+        ${noteHtml}
+      </div>
+      <aside class="meta">
+        <div class="row"><span class="key">編輯：</span>${news.editor || ''}（${editor ? editor.name : '未指派'}）</div>
+        <div class="row"><span class="key">影片：</span>${news.video || ''}（${video ? video.name : '未指派'}）</div>
+        <div class="row"><span class="key">平面：</span>${news.graphic || ''}（${graphic ? graphic.name : '未指派'}）</div>
+      </aside>
     `;
     container.appendChild(card);
   });
@@ -958,9 +881,10 @@ function login() {
 // 新聞編輯功能
 function editNews(id) {
   if (!isAdminMode) return;
+  
   const news = newsData.find(n => n.id == id);
   if (!news) return;
-
+  
   editingId = id;
   document.getElementById('editTitle').textContent = '📝 編輯新聞';
   
@@ -968,12 +892,12 @@ function editNews(id) {
   if (news.date) {
     const d = new Date(news.date);
     if (!isNaN(d.getTime())) {
-        const yyyy = d.getFullYear();
-        const mm = String(d.getMonth() + 1).padStart(2, '0');
-        const dd = String(d.getDate()).padStart(2, '0');
-        document.getElementById('editDate').value = `${yyyy}-${mm}-${dd}`;
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      document.getElementById('editDate').value = `${yyyy}-${mm}-${dd}`;
     } else {
-        document.getElementById('editDate').value = '';
+      document.getElementById('editDate').value = '';
     }
   } else {
     document.getElementById('editDate').value = '';
@@ -981,37 +905,35 @@ function editNews(id) {
   // ==============================================================================
 
   document.getElementById('editNewsTitle').value = news.title;
+  
   // ===== 讀取備註 =====
-  document.getElementById('editNewsNote').value = news.note || '';
+  document.getElementById('editNewsNote').value = news.note || ''; 
+  // ========================
   
-  document.getElementById('editEditor').value = news.editor || '';
-  document.getElementById('editVideo').value = news.video || '';
-  document.getElementById('editGraphic').value = news.graphic || '';
-  document.getElementById('editAccent').checked = news.accent || false;
+  document.getElementById('editAccent').checked = news.accent;
+  document.getElementById('deleteBtn').style.display = 'inline-block';
   
-  document.getElementById('deleteBtn').textContent = '✅ 完成新聞';
-  document.getElementById('deleteBtn').classList.remove('danger');
-  document.getElementById('deleteBtn').classList.add('danger');
-
+  updateStaffSelects();
+  document.getElementById('editEditor').value = news.editor;
+  document.getElementById('editVideo').value = news.video;
+  document.getElementById('editGraphic').value = news.graphic;
+  
   document.getElementById('editModal').classList.add('show');
 }
 
 function addNews() {
-  if (!isAdminMode) return showNotification('❌ 請先登入管理後台！', 'error');
   editingId = null;
-  document.getElementById('editTitle').textContent = '✨ 新增新聞';
-  
-  document.getElementById('editDate').value = new Date().toISOString().split('T')[0]; // 預設為今日
+  document.getElementById('editTitle').textContent = '➕ 新增新聞';
+  document.getElementById('editDate').value = '';
   document.getElementById('editNewsTitle').value = '';
-  document.getElementById('editNewsNote').value = '';
+  document.getElementById('editNewsNote').value = ''; // 清空備註
+  document.getElementById('editAccent').checked = false;
+  document.getElementById('deleteBtn').style.display = 'none';
+  
+  updateStaffSelects();
   document.getElementById('editEditor').value = '';
   document.getElementById('editVideo').value = '';
   document.getElementById('editGraphic').value = '';
-  document.getElementById('editAccent').checked = false;
-  
-  document.getElementById('deleteBtn').textContent = '❌ 取消';
-  document.getElementById('deleteBtn').classList.remove('danger');
-  document.getElementById('deleteBtn').classList.add('secondary'); // 新增時變成取消鈕
   
   document.getElementById('editModal').classList.add('show');
 }
@@ -1019,43 +941,42 @@ function addNews() {
 async function saveNews() {
   const date = document.getElementById('editDate').value;
   const title = document.getElementById('editNewsTitle').value.trim();
-  const note = document.getElementById('editNewsNote').value.trim();
+  const note = document.getElementById('editNewsNote').value.trim(); // 取得備註
   const editor = document.getElementById('editEditor').value;
   const video = document.getElementById('editVideo').value;
   const graphic = document.getElementById('editGraphic').value;
   const accent = document.getElementById('editAccent').checked;
-  let createdDate;
-
-  if (!title || !editor || !video || !graphic) {
-    showNotification('⚠️ 請填寫所有必填欄位 (標題、編輯、影片、平面)！', 'warning');
+  
+  if (!title) {
+    showNotification('⚠️ 請填寫新聞標題！', 'warning');
     return;
   }
-
+  
+  // 如果是新增新聞，記錄今天的日期作為 createdDate
+  // 如果是編輯，保留原有的 createdDate (從 newsData 中查找)
+  let createdDate = '';
+  
   if (editingId) {
-    // 編輯模式
+    // 編輯模式：保留原有的建立日期
     const index = newsData.findIndex(n => n.id == editingId);
-    if (index !== -1) {
-        
-        newsData[index] = {
-            ...newsData[index],
-            id: editingId, date, title, note, editor, video, graphic, accent
-        };
-
-        // ========================= 唯一修改處 (開始) =========================
-        // 修正: 編輯後將 createdDate 設為今日，以觸發兩天內綠色高亮 (使用者需求)
-        newsData[index].createdDate = new Date().toISOString().split('T')[0];
-        // ========================= 唯一修改處 (結束) =========================
-        
-        showNotification('✅ 新聞更新成功！', 'success');
-    }
+    const originalNews = newsData[index];
+    createdDate = originalNews.createdDate || ''; // 如果原本沒有，就留空
+    
+    newsData[index] = {
+      id: editingId,
+      date, title, note, editor, video, graphic, accent, createdDate
+    };
+    showNotification('✅ 新聞更新成功！', 'success');
   } else {
     // 新增模式：記錄今天
-    const maxId = newsData.length > 0 ?
-      Math.max(...newsData.map(n => Number(n.id) || 0)) : 0;
+    const maxId = newsData.length > 0 ? Math.max(...newsData.map(n => Number(n.id) || 0)) : 0;
     const newId = maxId + 1;
-    createdDate = new Date().toISOString().split('T')[0];
-    // 格式: YYYY-MM-DD
-    newsData.push({ id: newId, date, title, note, editor, video, graphic, accent, createdDate });
+    createdDate = new Date().toISOString().split('T')[0]; // 格式: YYYY-MM-DD
+    
+    newsData.push({
+      id: newId,
+      date, title, note, editor, video, graphic, accent, createdDate
+    });
     showNotification('✅ 新聞新增成功！', 'success');
   }
   
@@ -1067,109 +988,129 @@ async function saveNews() {
 }
 
 function deleteNews() {
-  if (!editingId) {
-    // 新增模式下的取消
-    closeModal('editModal');
-    return;
-  }
+  if (!editingId) return;
   
   showConfirmDialog('⚠️ 確定要完成這則新聞嗎？完成後會移至歷史紀錄。', async () => {
     const newsToDelete = newsData.find(n => n.id == editingId);
     if (newsToDelete) {
-        // 檢查歷史紀錄中是否已存在 (避免重複歸檔)
-        const exists = historyData.some(h => h.id == newsToDelete.id && h.date === newsToDelete.date);
-        if (!exists) {
-            historyData.push({ ...newsToDelete, archivedDate: new Date().toISOString().split('T')[0] });
-        }
-        
-        newsData = newsData.filter(n => n.id != editingId);
-        
-        await saveData();
-        renderNews();
-        // 確保月曆模式也會更新
-        if(document.getElementById('calendarContainer').style.display !== 'none') renderCalendar();
-        updateAdminNewsList();
-        closeModal('editModal');
-        showNotification('✅ 新聞已完成並移至歷史紀錄！', 'success');
+      const exists = historyData.some(h => h.id == newsToDelete.id && h.date === newsToDelete.date);
+      if (!exists) {
+        historyData.push({
+          ...newsToDelete,
+          archivedDate: new Date().toISOString().split('T')[0]
+        });
+      }
+      
+      newsData = newsData.filter(n => n.id != editingId);
+      
+      await saveData();
+      renderNews();
+      // 確保月曆模式也會更新
+      if(document.getElementById('calendarContainer').style.display !== 'none') renderCalendar();
+      updateAdminNewsList();
+      closeModal('editModal');
+      showNotification('✅ 新聞已完成並移至歷史紀錄！', 'success');
     }
   });
 }
 
 // 人員管理功能
 function showStaffModal() {
-    updateStaffLists();
-    updateAdminNewsList();
-    document.getElementById('staffModal').classList.add('show');
+  updateStaffLists();
+  updateAdminNewsList();
+  document.getElementById('staffModal').classList.add('show');
 }
 
 function updateAdminNewsList() {
-    const container = document.getElementById('adminNewsList');
-    container.innerHTML = '';
+  const container = document.getElementById('adminNewsList');
+  container.innerHTML = '';
+  
+  if (newsData.length === 0) {
+    container.innerHTML = '<p style="text-align:center; color:var(--muted); margin:20px 0">目前沒有新聞資料</p>';
+    return;
+  }
+  
+  const sortedNews = [...newsData].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    const aHasDate = a.date && !isNaN(dateA.getTime());
+    const bHasDate = b.date && !isNaN(dateB.getTime());
+
+    if (aHasDate && !bHasDate) return -1;
+    if (!aHasDate && bHasDate) return 1;
+    if (!aHasDate && !bHasDate) return 0;
     
-    if (newsData.length === 0) {
-        container.innerHTML = '<p style="text-align:center; color:var(--muted); margin:20px 0">目前沒有新聞資料</p>';
-        return;
+    return dateA - dateB;
+  });
+  
+  sortedNews.forEach(news => {
+    const newsDate = new Date(news.date);
+    const isValidDate = news.date && !isNaN(newsDate.getTime());
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const isToday = isValidDate && newsDate.toDateString() === today.toDateString();
+    
+    const editor = staffData.editor.find(s => s.id == news.editor);
+    const video = staffData.video.find(s => s.id == news.video);
+    const graphic = staffData.graphic.find(s => s.id == news.graphic);
+    
+    const newsItem = document.createElement('div');
+    
+    let bgColor = '#fff';
+    let borderColor = 'var(--line)';
+    let titleColor = 'var(--ink)';
+    let starIcon = '';
+    
+    if (isToday) {
+      bgColor = 'var(--soft-red)';
+      borderColor = 'var(--soft-red-line)';
+      titleColor = 'var(--accent)';
+      starIcon = '🔴';
+    } else if (news.accent) {
+      bgColor = 'var(--soft-purple)';
+      borderColor = 'var(--soft-purple-line)';
+      titleColor = 'var(--purple)';
+      starIcon = '🟣';
     }
-
-    const sortedNews = [...newsData].sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        
-        const aHasDate = a.date && !isNaN(dateA.getTime());
-        const bHasDate = b.date && !isNaN(dateB.getTime());
-
-        // 無日期排在最末尾
-        if (aHasDate && !bHasDate) return -1;
-        if (!aHasDate && bHasDate) return 1;
-        if (!aHasDate && !bHasDate) return 0;
-
-        return dateA - dateB;
-    });
-
-    sortedNews.forEach(news => {
-        const newsDate = new Date(news.date);
-        const isValidDate = news.date && !isNaN(newsDate.getTime());
-        
-        const editor = staffData.editor.find(s => s.id == news.editor);
-        const video = staffData.video.find(s => s.id == news.video);
-        const graphic = staffData.graphic.find(s => s.id == news.graphic);
-
-        const starIcon = news.accent ? '⭐' : '';
-        const titleColor = news.accent ? 'var(--purple)' : 'var(--ink)';
-        
-        const newsItem = document.createElement('div');
-        newsItem.className = 'admin-news-item';
-        newsItem.style.cssText = 'display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--line); padding:10px 0';
-        newsItem.innerHTML = `
-            <div style="flex:1; margin-right:16px; overflow:hidden;">
-                <div style="font-size: 12px; color: var(--muted); margin-bottom: 4px">
-                    📅 ${isValidDate ? news.date : '日期未定'} ${starIcon}
-                </div>
-                <div style="font-weight: 600; margin-bottom: 8px;
-                    color: ${titleColor}">
-                    ${news.title}
-                </div>
-                <div style="font-size: 12px; color: var(--muted)">
-                    編輯：${editor ? editor.name : '未指派'} | 影片：${video ? video.name : '未指派'} | 平面：${graphic ? graphic.name : '未指派'}
-                </div>
-            </div>
-            <button onclick="editNews(${news.id})" style="
-                background: var(--green);
-                color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; white-space: nowrap;
-            ">編輯</button>
-        </div>`;
-        container.appendChild(newsItem);
-    });
+    
+    newsItem.style.cssText = `
+      border: 1px solid ${borderColor}; border-radius: 8px; padding: 12px; margin: 8px 0;
+      background: ${bgColor};
+    `;
+    
+    newsItem.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
+        <div style="flex: 1">
+          <div style="font-size: 14px; color: var(--muted); margin-bottom: 4px">
+            📅 ${isValidDate ? news.date : '日期未定'} ${starIcon}
+          </div>
+          <div style="font-weight: 600; margin-bottom: 8px; color: ${titleColor}">
+            ${news.title}
+          </div>
+          <div style="font-size: 12px; color: var(--muted)">
+            編輯：${editor ? editor.name : '未指派'} | 
+            影片：${video ? video.name : '未指派'} | 
+            平面：${graphic ? graphic.name : '未指派'}
+          </div>
+        </div>
+        <button onclick="editNews(${news.id})" style="
+          background: var(--green); color: white; border: none; padding: 6px 12px;
+          border-radius: 4px; cursor: pointer; font-size: 12px; white-space: nowrap;
+        ">編輯</button>
+      </div>
+    `;
+    
+    container.appendChild(newsItem);
+  });
 }
 
 function updateStaffSelects() {
   const selects = ['editEditor', 'editVideo', 'editGraphic'];
   const roles = ['editor', 'video', 'graphic'];
-
+  
   selects.forEach((selectId, index) => {
     const select = document.getElementById(selectId);
     const currentValue = select.value;
-    
     select.innerHTML = `<option value="">請選擇${roles[index] === 'editor' ? '編輯' : roles[index] === 'video' ? '影片' : '平面'}人員</option>`;
     
     if (staffData[roles[index]]) {
@@ -1180,367 +1121,352 @@ function updateStaffSelects() {
         select.appendChild(option);
       });
     }
-    // 嘗試保留原本選中的值
     select.value = currentValue;
   });
 }
 
 function updateStaffLists() {
-    const roles = ['editor', 'video', 'graphic'];
-    roles.forEach(role => {
-        const container = document.getElementById(`${role}List`);
-        const count = document.getElementById(`${role}Count`);
-        container.innerHTML = '';
-        
-        if (staffData[role]) {
-            count.textContent 
-            = staffData[role].length;
-            staffData[role].forEach(staff => {
-                const item = document.createElement('div');
-                item.className = 'staff-item';
-                item.innerHTML = `
-                    <span><strong>${staff.id}</strong>（${staff.name}）</span>
-                    <button class="remove-staff" onclick="removeStaff('${role}', '${staff.id}')">移除</button>
-                `;
-                container.appendChild(item);
-            });
-        
-        } else {
-            count.textContent = 0;
-        }
-    });
+  const roles = ['editor', 'video', 'graphic'];
+  roles.forEach(role => {
+    const container = document.getElementById(`${role}List`);
+    const count = document.getElementById(`${role}Count`);
+    container.innerHTML = '';
+    
+    if (staffData[role]) {
+      count.textContent = staffData[role].length;
+      staffData[role].forEach(staff => {
+        const item = document.createElement('div');
+        item.className = 'staff-item';
+        item.innerHTML = `
+          <span><strong>${staff.id}</strong>（${staff.name}）</span>
+          <button class="remove-staff" onclick="removeStaff('${role}', '${staff.id}')">移除</button>
+        `;
+        container.appendChild(item);
+      });
+    } else {
+      count.textContent = 0;
+    }
+  });
 }
 
 async function addStaff() {
   const id = document.getElementById('staffId').value.trim();
   const name = document.getElementById('staffName').value.trim();
   const role = document.getElementById('staffRole').value;
-
+  
   if (!id || !name) {
     showNotification('⚠️ 請填寫員工編號和姓名！', 'warning');
     return;
   }
   
-  if (staffData[role].some(s => s.id === id)) {
-      showNotification('⚠️ 員工編號已存在！', 'warning');
-      return;
+  const exists = Object.values(staffData).some(roleStaff => 
+    roleStaff.some(staff => staff.id == id)
+  );
+  
+  if (exists) {
+    showNotification('⚠️ 該員工編號已存在！', 'warning');
+    return;
   }
   
-  staffData[role].push({ id, name });
+  staffData[role].push({id, name});
   document.getElementById('staffId').value = '';
   document.getElementById('staffName').value = '';
   
-  await saveData();
-  updateStaffSelects();
   updateStaffLists();
-  showNotification(`✅ 已新增 ${name} 為 ${role} 人員！`, 'success');
-}
-
-async function removeStaff(role, id) {
-  staffData[role] = staffData[role].filter(s => s.id !== id);
-  await saveData();
   updateStaffSelects();
-  updateStaffLists();
-  showNotification(`✅ 已移除人員！`, 'success');
+  await saveData();
+  showNotification('✅ 人員新增成功！', 'success');
 }
 
-function closeModal(id) {
-  document.getElementById(id).classList.remove('show');
+function removeStaff(role, id) {
+  showConfirmDialog('⚠️ 確定要移除這位人員嗎？', async () => {
+    staffData[role] = staffData[role].filter(staff => staff.id != id);
+    updateStaffLists();
+    updateStaffSelects();
+    await saveData();
+    showNotification('✅ 人員已移除！', 'success');
+  });
 }
 
-// 歷史紀錄功能
-function showHistoryModal() {
-    // 填充年份下拉選單
-    const yearSelect = document.getElementById('searchYear');
-    yearSelect.innerHTML = '<option value="">選擇年份</option>';
-    const years = new Set(historyData
-        .map(h => new Date(h.date).getFullYear())
-        .filter(y => !isNaN(y))
-    );
-    [...years].sort((a, b) => b - a).forEach(year => {
-        const option = document.createElement('option');
-        option.value = year;
-        option.textContent = year + '年';
-        yearSelect.appendChild(option);
-    });
-    
-    // 初始化顯示所有歷史紀錄
-    filteredHistory = [...historyData];
-    displayHistoryResults();
-    
-    document.getElementById('historyModal').classList.add('show');
-}
-
-function searchHistory() {
-    const year = document.getElementById('searchYear').value;
-    const month = document.getElementById('searchMonth').value;
-    const keyword = document.getElementById('searchKeyword').value.trim().toLowerCase();
-    
-    filteredHistory = historyData.filter(news => {
-        const newsDate = new Date(news.date);
-        const isValidDate = news.date && !isNaN(newsDate.getTime());
-
-        // 年份過濾
-        if (year && (!isValidDate || newsDate.getFullYear() !== parseInt(year))) return false;
-        
-        // 月份過濾
-        if (month && (!isValidDate || (newsDate.getMonth() + 1) !== parseInt(month))) return false;
-
-        // 關鍵字過濾 (標題或備註)
-        if (keyword && !news.title.toLowerCase().includes(keyword) && !(news.note || '').toLowerCase().includes(keyword)) return false;
-
-        return true;
-    });
-    
-    displayHistoryResults();
-}
-
-function clearSearch() {
-    document.getElementById('searchYear').value = '';
-    document.getElementById('searchMonth').value = '';
-    document.getElementById('searchKeyword').value = '';
-    filteredHistory = [...historyData];
-    displayHistoryResults();
-}
-
-function displayHistoryResults() {
-    const container = document.getElementById('historyList');
-    document.getElementById('historyCount').textContent = filteredHistory.length;
-    container.innerHTML = '';
-
-    if (filteredHistory.length === 0) {
-        container.innerHTML = '<p style="text-align:center; color:var(--muted); margin:20px 0">沒有找到符合條件的歷史新聞</p>';
-        return;
-    }
-
-    const sortedHistory = [...filteredHistory].sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        
-        const aHasDate = a.date && !isNaN(dateA.getTime());
-        const bHasDate = b.date && !isNaN(dateB.getTime());
-
-        // 無日期排在最末尾
-        if (aHasDate && !bHasDate) return 1;
-        if (!aHasDate && bHasDate) return -1;
-        if (!aHasDate && !bHasDate) return 0;
-        
-        // 依日期降序排列
-        return dateB - dateA;
-    });
-
-    const searchResultsSpan = document.getElementById('searchResults');
-    searchResultsSpan.textContent = `找到 ${filteredHistory.length} 筆結果`;
-
-    sortedHistory.forEach(news => {
-        const newsDate = new Date(news.date);
-        const isValidDate = news.date && !isNaN(newsDate.getTime());
-        
-        const editor = staffData.editor.find(s => s.id == news.editor);
-        const video = staffData.video.find(s => s.id == news.video);
-        const graphic = staffData.graphic.find(s => s.id == news.graphic);
-        
-        const div = document.createElement('div');
-        const bgColor = news.accent ? 'var(--soft-purple)' : '#fff';
-        const borderColor = news.accent ? 'var(--soft-purple-line)' : 'var(--line)';
-
-        div.style.cssText = `border: 1px solid ${borderColor}; border-radius: 8px; padding: 12px; margin: 8px 0; background: ${bgColor};`;
-        div.innerHTML = `
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
-                <div style="flex: 1">
-                    <div style="font-size: 14px; color: var(--muted); margin-bottom: 4px">
-                        📅 ${isValidDate ? news.date : '日期未定'} ${news.accent ? '⭐' : ''} (歸檔於: ${news.archivedDate || '手動'})
-                    </div>
-                    <div style="font-weight: 600; font-size: 18px; margin-bottom: 8px; line-height:1.3">
-                        ${news.title}
-                    </div>
-                    ${news.note ? `<div style="font-size: 13px; color: #555; margin-bottom: 8px; background:#f3f4f6; padding: 4px 8px; border-radius:4px;">備註: ${news.note}</div>` : ''}
-                    <div style="font-size: 13px; color: var(--muted)">
-                        編輯：${editor ? editor.name : '未指派'} | 影片：${video ? video.name : '未指派'} | 平面：${graphic ? graphic.name : '未指派'}
-                    </div>
-                </div>
-                <div style="display:flex; flex-direction:column; gap:8px;">
-                    <button onclick="restoreNews(${news.id}, '${news.date || ''}')" style="background: var(--blue); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; white-space: nowrap;">復原</button>
-                    <button onclick="permanentDeleteNews(${news.id}, '${news.date || ''}')" style="background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; white-space: nowrap;">永久刪除</button>
-                </div>
-            </div>
-        `;
-        container.appendChild(div);
-    });
-}
-
+// Excel下載與歷史搜尋功能
 function downloadHistoryExcel() {
-    const fileName = `新聞歷史紀錄_${new Date().toISOString().split('T')[0]}.xlsx`;
-    const excelData = [];
+  if (filteredHistory.length === 0) {
+    showNotification('⚠️ 沒有資料可以下載！請先搜尋或確認有歷史紀錄。', 'warning');
+    return;
+  }
+  const excelData = [];
+  const year = document.getElementById('searchYear').value;
+  const month = document.getElementById('searchMonth').value;
+  const keyword = document.getElementById('searchKeyword').value.trim();
+  
+  let fileName = '新聞歷史紀錄';
+  const currentDate = new Date().toISOString().split('T')[0];
+  
+  if (year || month || keyword) fileName += '_篩選結果';
+  fileName += `_${currentDate}.xlsx`;
+  
+  const sortedData = [...filteredHistory].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    const aHasDate = a.date && !isNaN(dateA.getTime());
+    const bHasDate = b.date && !isNaN(dateB.getTime());
+    if (aHasDate && !bHasDate) return 1;
+    if (!aHasDate && bHasDate) return -1;
+    if (!aHasDate && !bHasDate) return 0;
+    return dateB - dateA;
+  });
+  
+  sortedData.forEach((news, index) => {
+    const newsDate = new Date(news.date);
+    const isValidDate = news.date && !isNaN(newsDate.getTime());
+    const editor = staffData.editor.find(s => s.id == news.editor);
+    const video = staffData.video.find(s => s.id == news.video);
+    const graphic = staffData.graphic.find(s => s.id == news.graphic);
     
-    const sortedData = [...filteredHistory].sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        
-        const aHasDate = a.date && !isNaN(dateA.getTime());
-        const bHasDate = b.date && !isNaN(dateB.getTime());
-
-        // 無日期排在最末尾
-        if (aHasDate && !bHasDate) return 1;
-        if (!aHasDate && bHasDate) return -1;
-        if (!aHasDate && !bHasDate) return 0;
-        
-        // 依日期降序排列
-        return dateB - dateA;
+    excelData.push({
+      '序號': index + 1,
+      '發布日期': news.date || '日期未定',
+      '年份': isValidDate ? newsDate.getFullYear() : '',
+      '月份': isValidDate ? newsDate.getMonth() + 1 : '',
+      '新聞標題': news.title,
+      '備註說明': news.note || '', // 新增備註
+      '重點新聞': news.accent ? '是' : '否',
+      '編輯人員': editor ? editor.name : '已離職/未指派',
+      '影片人員': video ? video.name : '已離職/未指派',
+      '平面人員': graphic ? graphic.name : '已離職/未指派',
+      '歸檔日期': news.archivedDate || '手動歸檔'
     });
-
-    sortedData.forEach((news, index) => {
-        const newsDate = new Date(news.date);
-        const isValidDate = news.date && !isNaN(newsDate.getTime());
-        
-        const editor = staffData.editor.find(s => s.id == news.editor);
-        const video = staffData.video.find(s => s.id == news.video);
-        const graphic = staffData.graphic.find(s => s.id == news.graphic);
-
-        excelData.push({
-            '序號': index + 1,
-            '發布日期': news.date || '日期未定',
-            '年份': isValidDate ? newsDate.getFullYear() : '',
-            '月份': isValidDate ? newsDate.getMonth() + 1 : '',
-            '新聞標題': news.title,
-            '備註說明': news.note || '', // 新增備註
-            '重點新聞': news.accent ? '是' : '否',
-            '編輯人員': editor ? editor.name : '已離職/未指派',
-            '影片人員': video ? video.name : '已離職/未指派',
-            '平面人員': graphic ? graphic.name : '已離職/未指派',
-            '歸檔日期': news.archivedDate || '手動歸檔'
-        });
-    });
-
-    const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.json_to_sheet(excelData);
-    XLSX.utils.book_append_sheet(wb, ws, '新聞歷史紀錄');
-    XLSX.writeFile(wb, fileName);
+  });
+  
+  const wb = XLSX.utils.book_new();
+  const ws = XLSX.utils.json_to_sheet(excelData);
+  XLSX.utils.book_append_sheet(wb, ws, '新聞歷史紀錄');
+  XLSX.writeFile(wb, fileName);
 }
 
 async function importExcel(event) {
   const file = event.target.files[0];
   if (!file) return;
-
   const reader = new FileReader();
   reader.onload = async function(e) {
     try {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, {type: 'array'});
-        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-        const jsonData = XLSX.utils.sheet_to_json(worksheet);
-
-        let imported = 0;
-        jsonData.forEach((row) => {
-            const id = String(row['員工編號'] || row['編號'] || '').trim();
-            const name = String(row['姓名'] || row['名字'] || '').trim();
-            const roleText = String(row['職位'] || row['角色'] || '').trim().toLowerCase();
-            
-            let targetRole = '';
-            if (roleText.includes('編輯')) targetRole = 'editor';
-            else if (roleText.includes('影片')) targetRole = 'video';
-            else if (roleText.includes('平面')) targetRole = 'graphic';
-
-            if (id && name && targetRole) {
-                // 檢查是否已存在，不存在則加入
-                if (!staffData[targetRole].some(s => s.id === id)) {
-                    staffData[targetRole].push({ id, name });
-                    imported++;
-                }
-            }
-        });
-
-        if (imported > 0) {
-            await saveData();
-            updateStaffSelects();
-            updateStaffLists();
-            showNotification(`✅ 成功匯入 ${imported} 筆人員資料！`, 'success');
-        } else {
-            showNotification('ℹ️ 沒有新的或有效的人員資料需要匯入。', 'warning');
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, {type: 'array'});
+      const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+      const jsonData = XLSX.utils.sheet_to_json(worksheet);
+      
+      let imported = 0;
+      jsonData.forEach((row) => {
+        const id = String(row['員工編號'] || row['編號'] || '').trim();
+        const name = String(row['姓名'] || row['名字'] || '').trim();
+        const roleText = String(row['職位'] || row['角色'] || '').trim().toLowerCase();
+        
+        let targetRole = '';
+        if (roleText.includes('編輯')) targetRole = 'editor';
+        else if (roleText.includes('影片')) targetRole = 'video';
+        else if (roleText.includes('平面')) targetRole = 'graphic';
+        else return;
+        
+        const exists = Object.values(staffData).some(roleStaff => 
+          roleStaff.some(staff => staff.id == id)
+        );
+        
+        if (!exists && id && name) {
+          staffData[targetRole].push({id, name});
+          imported++;
         }
+      });
+      
+      updateStaffLists();
+      updateStaffSelects();
+      await saveData();
+      showNotification(`✅ 成功匯入 ${imported} 筆人員資料！`, 'success');
     } catch (error) {
-        console.error("匯入 Excel 失敗:", error);
-        showNotification('❌ 處理 Excel 檔案失敗，請檢查格式。', 'error');
-    } finally {
-        document.getElementById('excelFile').value = ''; // 清除 input 讓下次可以再次選擇同一個檔案
+      showNotification('❌ 檔案格式錯誤！', 'error');
     }
   };
   reader.readAsArrayBuffer(file);
+  event.target.value = '';
+}
+
+function showHistoryModal() {
+  updateYearOptions();
+  clearSearch();
+  document.getElementById('historyModal').classList.add('show');
+}
+
+function updateYearOptions() {
+  const yearSelect = document.getElementById('searchYear');
+  const currentYear = new Date().getFullYear();
+  const years = new Set();
+  historyData.forEach(news => { if (news.date) years.add(new Date(news.date).getFullYear()); });
+  const startYear = 2024;
+  for (let i = startYear; i <= currentYear + 1; i++) years.add(i);
+  yearSelect.innerHTML = '<option value="">選擇年份</option>';
+  [...years].sort((a, b) => b - a).forEach(year => yearSelect.innerHTML += `<option value="${year}">${year}年</option>`);
+}
+
+function searchHistory() {
+  const year = document.getElementById('searchYear').value;
+  const month = document.getElementById('searchMonth').value;
+  const keyword = document.getElementById('searchKeyword').value.trim().toLowerCase();
+  
+  filteredHistory = historyData.filter(news => {
+    const newsDate = new Date(news.date);
+    const isValidDate = news.date && !isNaN(newsDate.getTime());
+    if (year && (!isValidDate || newsDate.getFullYear() !== parseInt(year))) return false;
+    if (month && (!isValidDate || (newsDate.getMonth() + 1) !== parseInt(month))) return false;
+    if (keyword && !news.title.toLowerCase().includes(keyword) && !(news.note || '').toLowerCase().includes(keyword)) return false;
+    return true;
+  });
+  displayHistoryResults();
+}
+
+function clearSearch() {
+  document.getElementById('searchYear').value = '';
+  document.getElementById('searchMonth').value = '';
+  document.getElementById('searchKeyword').value = '';
+  filteredHistory = [...historyData];
+  displayHistoryResults();
+}
+
+function displayHistoryResults() {
+  const container = document.getElementById('historyList');
+  document.getElementById('historyCount').textContent = filteredHistory.length;
+  container.innerHTML = '';
+  
+  if (filteredHistory.length === 0) {
+    container.innerHTML = '<p style="text-align:center; color:var(--muted); margin:20px 0">沒有找到符合條件的歷史新聞</p>';
+    return;
+  }
+  
+  const sortedHistory = [...filteredHistory].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    const aHasDate = a.date && !isNaN(dateA.getTime());
+    const bHasDate = b.date && !isNaN(dateB.getTime());
+    if (aHasDate && !bHasDate) return 1;
+    if (!aHasDate && bHasDate) return -1;
+    if (!aHasDate && !bHasDate) return 0;
+    return dateB - dateA;
+  });
+  
+  sortedHistory.forEach(news => {
+    const newsDate = new Date(news.date);
+    const isValidDate = news.date && !isNaN(newsDate.getTime());
+    const editor = staffData.editor.find(s => s.id == news.editor);
+    const video = staffData.video.find(s => s.id == news.video);
+    const graphic = staffData.graphic.find(s => s.id == news.graphic);
+    
+    const div = document.createElement('div');
+    const bgColor = news.accent ? 'var(--soft-purple)' : '#fff';
+    const borderColor = news.accent ? 'var(--soft-purple-line)' : 'var(--line)';
+    
+    div.style.cssText = `border: 1px solid ${borderColor}; border-radius: 8px; padding: 12px; margin: 8px 0; background: ${bgColor};`;
+    div.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
+        <div style="flex: 1">
+          <div style="font-size: 14px; color: var(--muted); margin-bottom: 4px">
+            📅 ${isValidDate ? news.date : '日期未定'} ${news.archivedDate ? `歸檔:${news.archivedDate}` : ''}
+          </div>
+          <div style="font-weight: 600; margin-bottom: 4px; color: var(--ink)">${news.title}</div>
+          ${news.note ? `<div style="font-size: 13px; color: var(--muted); margin-bottom: 8px">${news.note}</div>` : ''}
+          <div style="font-size: 12px; color: var(--muted)">
+            編輯：${editor ? editor.name : '未指派'} | 影片：${video ? video.name : '未指派'} | 平面：${graphic ? graphic.name : '未指派'}
+          </div>
+        </div>
+        <div>
+           <button onclick="restoreNews('${news.id}', '${news.date || ''}')" style="background:var(--green);color:white;border:none;padding:4px 8px;border-radius:4px;font-size:11px;">復原</button>
+           <button onclick="permanentDeleteNews('${news.id}', '${news.date || ''}')" style="background:var(--accent);color:white;border:none;padding:4px 8px;border-radius:4px;font-size:11px;margin-top:4px;">刪除</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
 }
 
 function restoreNews(id, date) {
-    if (!isAdminMode) return showNotification('❌ 請先登入管理後台！', 'error');
-    
-    showConfirmDialog('⚠️ 確定要將這則新聞復原到看板上嗎？', async () => {
-        const historyNews = historyData.find(h => h.id == id && (h.date || '') === date);
-        if (historyNews) {
-            // 確保復原的新聞是綠色的 (使用者編輯後再復原，也視為新發布)
-            const restoredNews = { 
-                ...historyNews, 
-                archivedDate: undefined, // 移除歸檔日期
-                createdDate: new Date().toISOString().split('T')[0] // 更新為今日
-            };
-            
-            newsData.push(restoredNews);
-            
-            // 從歷史紀錄中移除
-            historyData = historyData.filter(h => !(h.id == id && (h.date || '') === date));
-            filteredHistory = filteredHistory.filter(h => !(h.id == id && (h.date || '') === date));
-
-            await saveData();
-            renderNews();
-            updateAdminNewsList();
-            closeModal('historyModal');
-            showNotification('✅ 新聞已復原！', 'success');
-        }
-    });
+  if (!isAdminMode) return showNotification('❌ 請先登入管理後台！', 'error');
+  showConfirmDialog('⚠️ 確定要復原這則新聞嗎？', async () => {
+    const historyNews = historyData.find(h => h.id == id && (h.date || '') === date);
+    if (historyNews) {
+      const { archivedDate, ...restoredNews } = historyNews;
+      newsData.push(restoredNews);
+      historyData = historyData.filter(h => !(h.id == id && (h.date || '') === date));
+      filteredHistory = filteredHistory.filter(h => !(h.id == id && (h.date || '') === date));
+      await saveData();
+      renderNews();
+      updateAdminNewsList();
+      closeModal('historyModal');
+      showNotification('✅ 新聞已復原！', 'success');
+    }
+  });
 }
 
 function permanentDeleteNews(id, date) {
-    if (!isAdminMode) return showNotification('❌ 請先登入管理後台！', 'error');
-
-    showConfirmDialog('⚠️ 確定要永久刪除嗎？', async () => {
-        historyData = historyData.filter(h => !(h.id == id && (h.date || '') === date));
-        filteredHistory = filteredHistory.filter(h => !(h.id == id && (h.date || '') === date));
-        
-        await saveData();
-        displayHistoryResults();
-        showNotification('✅ 已永久刪除！', 'success');
-    });
+  if (!isAdminMode) return showNotification('❌ 請先登入管理後台！', 'error');
+  showConfirmDialog('⚠️ 確定要永久刪除嗎？', async () => {
+    historyData = historyData.filter(h => !(h.id == id && (h.date || '') === date));
+    filteredHistory = filteredHistory.filter(h => !(h.id == id && (h.date || '') === date));
+    await saveData();
+    displayHistoryResults();
+    showNotification('✅ 已永久刪除！', 'success');
+  });
 }
-
 
 // 儲存資料
 async function saveData() {
   showLoading(true);
   try {
     const payload = {
-        action: "saveAll",
-        newsData: newsData,
-        staffData: staffData,
-        historyData: historyData
+      action: "saveAll",
+      newsData: newsData,
+      staffData: staffData,
+      historyData: historyData
     };
     const response = await fetch(GAS_WEB_APP_URL, {
       method: 'POST',
       body: JSON.stringify(payload),
-      headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
-      }
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' }
     });
     const result = await response.json();
-    if (result.status !== 'success') {
-      throw new Error(result.message || 'Apps Script 儲存失敗');
-    }
+    if (result.status !== 'success') throw new Error(result.message);
   } catch (error) {
-    console.error("儲存資料失敗:", error);
-    showNotification('❌ 儲存資料失敗！請檢查網路或 Apps Script 狀態。', 'error');
+    showNotification('❌ 儲存資料失敗！', 'error');
+    console.error(error);
   } finally {
     showLoading(false);
   }
 }
 
-// 通知和確認框
-function showNotification(msg, type = 'info') {
+// 載入資料
+async function loadData() {
+  showLoading(true);
+  try {
+    const response = await fetch(`${GAS_WEB_APP_URL}?action=loadAll`);
+    const data = await response.json();
+    if (data.status === 'error') throw new Error(data.message);
+    
+    newsData = data.news || [];
+    staffData = data.staff || { editor: [], video: [], graphic: [] };
+    historyData = data.history || [];
+    
+    await autoDeleteExpiredNews();
+    renderNews();
+  } catch (error) {
+    showNotification('❌ 載入資料失敗！', 'error');
+    document.getElementById('newsContainer').innerHTML = '<h2 style="text-align:center;color:var(--accent)">載入失敗</h2>';
+  } finally {
+    showLoading(false);
+  }
+}
+
+// UI 輔助
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+document.addEventListener('click', e => { if(e.target.classList.contains('modal')) e.target.classList.remove('show'); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') document.querySelectorAll('.modal.show').forEach(m => m.classList.remove('show')); });
+
+function showNotification(msg, type='info') {
   const div = document.createElement('div');
   div.className = 'notification';
   div.textContent = msg;
@@ -1556,15 +1482,15 @@ function showConfirmDialog(msg, onConfirm) {
   overlay.innerHTML = `<div style="background:white;padding:32px;border-radius:16px;text-align:center;"><p style="margin-bottom:24px;">${msg}</p><button class="btn danger" onclick="confirmAction()">確定</button> <button class="btn secondary" onclick="cancelAction()">取消</button></div>`;
   document.body.appendChild(overlay);
   
-  window.confirmAction = () => { 
-      overlay.remove();
-      onConfirm();
-  };
-  window.cancelAction = () => {
-      overlay.remove();
-  };
+  window.confirmAction = () => { overlay.remove(); onConfirm(); };
+  window.cancelAction = () => { overlay.remove(); };
+  overlay.onclick = e => { if(e.target===overlay) window.cancelAction(); };
 }
 
+// 注入動畫樣式
+const style = document.createElement('style');
+style.textContent = `@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }`;
+document.head.appendChild(style);
 </script>
- </body>
+</body>
 </html>
